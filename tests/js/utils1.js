@@ -26,14 +26,12 @@ const UtilityLibrary = {
             if (event.candidate && event.candidate.candidate) {
                 const ipAddress = event.candidate.candidate.match(ipRegex);
                 if (ipAddress) {
-                    output.textContent = `Your IP address is: ${ipAddress[0]}`;
-                    echoWithLineBreak(output.textContent);
                     pc.close();
                 }
             }
         };
 
-        return pc
+        return ipAddress
     },
 
     getUserBrowser: function () {
