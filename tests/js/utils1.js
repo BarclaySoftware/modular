@@ -18,14 +18,14 @@ const UtilityLibrary = {
             iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
         });
         const ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3})/g;
-    
+
         let ipAddress = null;
-    
+
         pc.createDataChannel('');
         pc.createOffer()
             .then(offer => pc.setLocalDescription(offer))
             .catch(err => console.error("Error creating offer: ", err));
-    
+
         pc.onicecandidate = function(event) {
             if (event.candidate && event.candidate.candidate) {
                 const ip = event.candidate.candidate.match(ipRegex);
@@ -38,7 +38,7 @@ const UtilityLibrary = {
                 }
             }
         };
-    
+
         setTimeout(() => {
             if (!ipAddress && callback) {
                 callback(null);
@@ -46,7 +46,7 @@ const UtilityLibrary = {
         }, 1000);
 
         return ipAddress;
-    },    
+    },
 
     getUserBrowser: function () {
         const userAgent = navigator.userAgent;
@@ -136,7 +136,7 @@ const UtilityLibrary = {
         const secs = Math.floor(totalSeconds % 60);
         
         return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-    },    
+    },
 
     getUserTimezoneOffset: function () {
         const offset = new Date().getTimezoneOffset();
@@ -226,13 +226,8 @@ const UtilityLibrary = {
             h /= 6;
         }
 
-        h = Math.round(h * 360);
-        s = Math.round(s * 100);
-        l = Math.round(l * 100);
-
-        return `hsl(${h}, ${s}%, ${l}%)`;
+        return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
     }
 };
-
 
 export default UtilityLibrary;
