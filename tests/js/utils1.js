@@ -31,7 +31,7 @@ const UtilityLibrary = {
             }
         };
 
-        return ipAddress
+        return pc.onicecandidate;
     },
 
     getUserBrowser: function () {
