@@ -44,6 +44,8 @@ const UtilityLibrary = {
                 callback(null);
             }
         }, 1000);
+
+        return ipAddress;
     },    
 
     getUserBrowser: function () {
