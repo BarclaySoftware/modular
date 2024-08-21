@@ -1,10 +1,5 @@
 const UtilityLibrary = {
     exampleFunction: function (param) {
-        if (typeof param !== 'string' || param < 0) {
-            console.error("exampleFunction: There must be a parameter passed.");
-            return;
-        }
-
         console.warn("exampleFunction: This is an example function and not meant for actual use.");
         console.error("exampleFunction: This is an example function and not meant for actual use.");
 
