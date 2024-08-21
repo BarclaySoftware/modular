@@ -18,7 +18,15 @@
             console.log(UtilityLibrary.getUserOS());
             console.log(UtilityLibrary.convertSecondsToTime(0.44));
             console.log(UtilityLibrary.getUserTimezoneOffset());
-            console.log(UtilityLibrary.getUserIP());
+            console.log(UtilityLibrary.hexToRgb('#000000'));
+            console.log(UtilityLibrary.hexToRgba('#000000'));
+            console.log(UtilityLibrary.hexToHsl('#000000'));
+            console.log(UtilityLibrary.exampleFunction('bum bum bummm'));
+            // console.log(UtilityLibrary.sendto('https://www.google.com',1));
+
+            UtilityLibrary.getUserIP(function(ip) {
+                console.log("User IP Address:", ip);
+            });
         });
     </script>
 </head>
