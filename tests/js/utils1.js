@@ -13,26 +13,38 @@ const UtilityLibrary = {
         return navigator.language || navigator.userLanguage;
     },
 
-    getUserIP: function () {
+    getUserIP: function (callback) {
         const pc = new (window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection)({
             iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
         });
-        const ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g;
-
+        const ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3})/g;
+    
+        let ipAddress = null;
+    
         pc.createDataChannel('');
-        pc.createOffer().then(offer => pc.setLocalDescription(offer));
-
+        pc.createOffer()
+            .then(offer => pc.setLocalDescription(offer))
+            .catch(err => console.error("Error creating offer: ", err));
+    
         pc.onicecandidate = function(event) {
             if (event.candidate && event.candidate.candidate) {
-                const ipAddress = event.candidate.candidate.match(ipRegex);
-                if (ipAddress) {
+                const ip = event.candidate.candidate.match(ipRegex);
+                if (ip) {
+                    ipAddress = ip[0];
                     pc.close();
+                    if (callback) {
+                        callback(ipAddress);
+                    }
                 }
             }
         };
-
-        return pc.onicecandidate;
-    },
+    
+        setTimeout(() => {
+            if (!ipAddress && callback) {
+                callback(null);
+            }
+        }, 1000);
+    },    
 
     getUserBrowser: function () {
         const userAgent = navigator.userAgent;
