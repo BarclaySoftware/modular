@@ -36,7 +36,7 @@ const UtilityLibrary = {
     },
 
     fileToBase64: function (fileUrl, callback) {
-        console.warn('This function is highly broken and may be removed in future releases.')
+        console.warn('fileToBase64: This function is highly broken and may be removed in future releases.');
         const xhr = new XMLHttpRequest();
         xhr.open('GET', fileUrl, true);
         xhr.responseType = 'blob';
