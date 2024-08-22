@@ -391,7 +391,9 @@ const UtilityLibrary = {
         img.src = src;
 
         img.onload = function() {
-            return this.width + this.height;
+            width = this.width;
+            height = this.height;
+            return `${width}px x ${height}px`;
         }
     },
 

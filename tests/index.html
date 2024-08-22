@@ -40,16 +40,16 @@
             // UtilityLibrary.giveAssert(1 === 1, "This will not be displayed because the condition is true");
 
 
-            //console.log(UtilityLibrary.imageSize('https://s0.2mdn.net/simgad/1183185463115785912'));
+            console.log(UtilityLibrary.imageSize('https://s0.2mdn.net/simgad/1183185463115785912'));
             console.log(UtilityLibrary.validateEmail('https://www.google.com',1));
 
-            UtilityLibrary.fileToBase64('https://s0.2mdn.net/simgad/1183185463115785912', function(base64) {
-                if (base64) {
-                    console.log('Base64:', base64);
-                } else {
-                    console.error('Failed to convert file to Base64.');
-                }
-            });
+            // UtilityLibrary.fileToBase64('https://s0.2mdn.net/simgad/1183185463115785912', function(base64) {
+            //     if (base64) {
+            //         console.log('Base64:', base64);
+            //     } else {
+            //         console.error('Failed to convert file to Base64.');
+            //     }
+            // });
 
             UtilityLibrary.getUserIP(function(ip) {
                 console.log("User IP Address:", ip);
