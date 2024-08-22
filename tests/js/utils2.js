@@ -36,6 +36,7 @@ const UtilityLibrary = {
     },
 
     fileToBase64: function (fileUrl, callback) {
+        console.warn('This function is highly broken and may be removed in future releases.')
         const xhr = new XMLHttpRequest();
         xhr.open('GET', fileUrl, true);
         xhr.responseType = 'blob';
@@ -385,6 +386,10 @@ const UtilityLibrary = {
 
     giveError: function (message) {
         console.error(message);
+    },
+
+    giveAssert: function (message) {
+        console.assert(message);
     },
 
     imageSize: function (src) {
