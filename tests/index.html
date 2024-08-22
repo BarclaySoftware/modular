@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utility Library Example</title>
     <script type="module">
-        import UtilityLibrary from 'https://modulas.pages.dev/tests/js/utils1.js';
+        // import UtilityLibrary from 'https://modulas.pages.dev/tests/js/utils1.js';
+        import UtilityLibrary from 'https://modulas.pages.dev/tests/js/utils2.js';
 
         document.addEventListener("DOMContentLoaded", function() {
             console.log(UtilityLibrary.getCurrentTime());
@@ -20,7 +21,14 @@
             console.log(UtilityLibrary.getUserTimezoneOffset());
             console.log(UtilityLibrary.hexToRgb('#000000'));
             console.log(UtilityLibrary.hexToRgba('#000000'));
-            console.log(UtilityLibrary.hexToHsl('#000000'));
+            console.log(UtilityLibrary.printMe('#000000'));
+            // console.log(UtilityLibrary.getRandCard());
+            console.log(UtilityLibrary.asciiChar('x'));
+            console.log(UtilityLibrary.isPalendrome('Ere I was like a psalm'));
+            console.log(UtilityLibrary.reverse('Yo ho ho'));
+            // console.log(UtilityLibrary.hexToHsl('#000000'));
+            // console.log(UtilityLibrary.hexToHsl('#000000'));
+            // console.log(UtilityLibrary.hexToHsl('#000000'));
             // console.log(UtilityLibrary.sendto('https://www.google.com',1));
 
             UtilityLibrary.getUserIP(function(ip) {

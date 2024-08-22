@@ -287,7 +287,7 @@ const UtilityLibrary = {
     reverse: function (string) {
         let newString = "";
         for (let i = string.length - 1; i >= 0; i--) {
-            newString += str[i];
+            newString += string[i];
         }
         return newString;
     },
