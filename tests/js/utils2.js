@@ -381,9 +381,9 @@ const UtilityLibrary = {
         console.error(message);
     },
 
-    giveAssert: function (condition, message) {
-        console.assert(condition, message);
-    },    
+    giveAssert: function (message) {
+        console.assert(message);
+    },
 
     imageSize: function (src) {
         const img = new Image();
