@@ -17,7 +17,23 @@ const UtilityLibrary = {
         return navigator.language || navigator.userLanguage;
     },
 
-    // getUserLocation
+    getUserLocation: function (callback) {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    const { latitude, longitude } = position.coords;
+                    callback({ latitude, longitude });
+                },
+                error => {
+                    console.error("getUserLocation: Unable to retrieve location. Error:", error.message);
+                    callback(null);
+                }
+            );
+        } else {
+            console.error("getUserLocation: Geolocation is not supported by this browser.");
+            callback(null);
+        }
+    },
 
     getUserIP: function (callback) {
         const pc = new (window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection)({
@@ -346,6 +362,17 @@ const UtilityLibrary = {
 
     giveError: function (message) {
         console.error(message);
+    },
+
+    imageSize: function (src) {
+        const img = new Image();
+
+        img.src = src;
+
+        img.onload = function() {
+        console.log('width ' + this.width)
+        console.log('height '+ this.height);
+        }
     },
 
     convertRelsToTime: function (rels) {

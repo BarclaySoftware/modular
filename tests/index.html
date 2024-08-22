@@ -14,6 +14,7 @@
             console.log(UtilityLibrary.getUserLanguage());
             console.log(UtilityLibrary.getUserBrowser());
             console.log(UtilityLibrary.isMobileDevice());
+            console.log(UtilityLibrary.getUserLanguage());
             console.log(UtilityLibrary.getScreenResolution());
             console.log(UtilityLibrary.getRandomNumber(44,774));
             console.log(UtilityLibrary.getUserOS());
@@ -31,10 +32,11 @@
             console.log(UtilityLibrary.currentUrl(''));
             console.log(UtilityLibrary.validateEmail('orange@gmail'));
             console.log(UtilityLibrary.validateEmail('orange@gmail.com'));
-            console.log(UtilityLibrary.giveMessage('orange@gmail.com'));
-            console.log(UtilityLibrary.giveInfo('orange@gmail.com'));
-            console.log(UtilityLibrary.giveWarn('orange@gmail.com'));
-            console.log(UtilityLibrary.giveError('orange@gmail.com'));
+            UtilityLibrary.giveMessage('orange@gmail.com');
+            UtilityLibrary.giveInfo('orange@gmail.com');
+            UtilityLibrary.giveWarn('orange@gmail.com');
+            UtilityLibrary.giveError('orange@gmail.com');
+            console.log(UtilityLibrary.imageSize('https://s0.2mdn.net/simgad/1183185463115785912'));
             // console.log(UtilityLibrary.validateEmail('https://www.google.com',1));
 
             UtilityLibrary.getUserIP(function(ip) {
