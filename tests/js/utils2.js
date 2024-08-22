@@ -210,9 +210,6 @@ const UtilityLibrary = {
     // calculator
 
     getRandCard: function () {
-        // program to shuffle the deck of cards
-
-        // declare card elements
         const suits = ["Spades", "Diamonds", "Club", "Heart"];
         const values = [
         "Ace",
@@ -230,10 +227,8 @@ const UtilityLibrary = {
         "King",
         ];
 
-        // empty array to contain cards
         let deck = [];
 
-        // create a deck of cards
         for (let i = 0; i < suits.length; i++) {
             for (let x = 0; x < values.length; x++) {
                 let card = { Value: values[x], Suit: suits[i] };
@@ -241,7 +236,6 @@ const UtilityLibrary = {
             }
         }
 
-        // shuffle the cards
         for (let i = deck.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * i);
             let temp = deck[i];
@@ -249,9 +243,6 @@ const UtilityLibrary = {
             deck[j] = temp;
         }
 
-        // console.log('The first five cards are:');
-
-        // display 5 results
         for (let i = 0; i < 5; i++) {
             // console.log(`${deck[i].Value} of ${deck[i].Suit}`)
         }
@@ -260,12 +251,6 @@ const UtilityLibrary = {
     },
 
     asciiChar: function (char) {
-        // program to find the ASCII value of a character
-
-        // take input from the user
-        // const string = prompt('Enter a character: ');
-
-        // convert into ASCII value
         const result = char.charCodeAt(0);
 
         return `The ASCII value is ${result}`
@@ -276,7 +261,6 @@ const UtilityLibrary = {
 
         for (let i = 0; i < len / 2; i++) {
 
-            // check if first and last string are same
             if (string[i] !== string[len - 1 - i]) {
                 return 'It is not a palindrome';
             }
@@ -302,6 +286,30 @@ const UtilityLibrary = {
         const minutes = Math.floor((seconds % 3600) / 60);
         const secs = seconds % 60;
         return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    },
+
+    decToBin: function (x) {
+        let bin = 0;
+        let rem, i = 1, step = 1;
+        while (x != 0) {
+            rem = x % 2;
+            console.log(
+                `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x/2)}`
+            );
+            x = parseInt(x / 2);
+            bin = bin + rem * i;
+            i = i * 10;
+        }
+
+        return `${bin}`;
+    },
+
+    makeBase64: function (string) {
+        const b64 = string; 
+
+        const result = window.btoa(b64);
+        console.log(result);
+        return result;
     },
 
     convertRelsToTime: function (rels) {
