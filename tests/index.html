@@ -28,8 +28,14 @@
             console.log(UtilityLibrary.reverse('Yo ho ho'));
             console.log(UtilityLibrary.decToBin('64'));
             console.log(UtilityLibrary.makeBase64('Hello'));
-            // console.log(UtilityLibrary.hexToHsl('#000000'));
-            // console.log(UtilityLibrary.sendto('https://www.google.com',1));
+            console.log(UtilityLibrary.currentUrl(''));
+            console.log(UtilityLibrary.validateEmail('orange@gmail'));
+            console.log(UtilityLibrary.validateEmail('orange@gmail.com'));
+            console.log(UtilityLibrary.giveMessage('orange@gmail.com'));
+            console.log(UtilityLibrary.giveInfo('orange@gmail.com'));
+            console.log(UtilityLibrary.giveWarn('orange@gmail.com'));
+            console.log(UtilityLibrary.giveError('orange@gmail.com'));
+            // console.log(UtilityLibrary.validateEmail('https://www.google.com',1));
 
             UtilityLibrary.getUserIP(function(ip) {
                 console.log("User IP Address:", ip);

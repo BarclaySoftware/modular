@@ -1,4 +1,8 @@
 const UtilityLibrary = {
+    functionName: function () {
+        // code
+    },
+
     getCurrentTime: function () {
         const now = new Date();
         return now.toLocaleTimeString();
@@ -293,9 +297,9 @@ const UtilityLibrary = {
         let rem, i = 1, step = 1;
         while (x != 0) {
             rem = x % 2;
-            console.log(
-                `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x/2)}`
-            );
+            // console.log(
+            //     `Step ${step++}: ${x}/2, Remainder = ${rem}, Quotient = ${parseInt(x/2)}`
+            // );
             x = parseInt(x / 2);
             bin = bin + rem * i;
             i = i * 10;
@@ -308,8 +312,40 @@ const UtilityLibrary = {
         const b64 = string; 
 
         const result = window.btoa(b64);
-        console.log(result);
         return result;
+    },
+
+    currentUrl: function () {
+        const url1 = window.location.href;
+
+        return url1
+    },
+
+    validateEmail: function (email) {
+        const regex_pattern =      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        
+        if (regex_pattern.test(email)) {
+            return 'The email address is valid';
+        }
+        else {
+            return 'The email address is not valid';
+        }
+    },
+
+    giveMessage: function (message) {
+        console.log(message)
+    },
+
+    giveInfo: function (message) {
+        console.info(message)
+    },
+
+    giveWarn: function (message) {
+        console.warn(message)
+    },
+
+    giveError: function (message) {
+        console.error(message)
     },
 
     convertRelsToTime: function (rels) {
@@ -326,8 +362,6 @@ const UtilityLibrary = {
         
         return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
     },
-
-    
 
     sendto: function (url, delay) {
         if (typeof url !== 'string' || typeof delay !== 'number' || delay < 0) {
