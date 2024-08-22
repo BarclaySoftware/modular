@@ -386,6 +386,7 @@ const UtilityLibrary = {
     },
 
     imageSize: function (src) {
+        console.error('imageSize: This function is highly broken and may be removed in future releases.');
         const img = new Image();
 
         img.src = src;
