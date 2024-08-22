@@ -333,19 +333,19 @@ const UtilityLibrary = {
     },
 
     giveMessage: function (message) {
-        console.log(message)
+        console.log(message);
     },
 
     giveInfo: function (message) {
-        console.info(message)
+        console.info(message);
     },
 
     giveWarn: function (message) {
-        console.warn(message)
+        console.warn(message);
     },
 
     giveError: function (message) {
-        console.error(message)
+        console.error(message);
     },
 
     convertRelsToTime: function (rels) {
