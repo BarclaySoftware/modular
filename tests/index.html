@@ -27,19 +27,23 @@
             console.log(UtilityLibrary.reverse('Yo ho ho'));
             console.log(UtilityLibrary.decToBin('64'));
             console.log(UtilityLibrary.makeBase64('Hello'));
-            console.log(UtilityLibrary.fileToBase64('https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg'));
             console.log(UtilityLibrary.currentUrl(''));
             console.log(UtilityLibrary.validateEmail('orange@gmail'));
             console.log(UtilityLibrary.validateEmail('orange@gmail.com'));
+
+            console.log('tueth');
             UtilityLibrary.giveMessage('orange@gmail.com');
             UtilityLibrary.giveInfo('orange@gmail.com');
             UtilityLibrary.giveWarn('orange@gmail.com');
             UtilityLibrary.giveError('orange@gmail.com');
-            UtilityLibrary.giveAssert('orange@gmail.com');
+            UtilityLibrary.giveAssert(1 === 2, "This will be displayed because the condition is false");
+            UtilityLibrary.giveAssert(1 === 1, "This will not be displayed because the condition is true");
+
+
             console.log(UtilityLibrary.imageSize('https://s0.2mdn.net/simgad/1183185463115785912'));
             console.log(UtilityLibrary.validateEmail('https://www.google.com',1));
 
-            UtilityLibrary.fileToBase64('https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg', function(base64) {
+            UtilityLibrary.fileToBase64('https://s0.2mdn.net/simgad/1183185463115785912', function(base64) {
                 if (base64) {
                     console.log('Base64:', base64);
                 } else {
