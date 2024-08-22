@@ -11,7 +11,6 @@
         document.addEventListener("DOMContentLoaded", function() {
             console.log(UtilityLibrary.getCurrentTime());
             console.log(UtilityLibrary.getCurrentDate());
-            // console.log(UtilityLibrary.getUserLocation());
             console.log(UtilityLibrary.getUserBrowser());
             console.log(UtilityLibrary.isMobileDevice());
             console.log(UtilityLibrary.getUserLanguage());
@@ -23,7 +22,6 @@
             console.log(UtilityLibrary.hexToRgb('#000000'));
             console.log(UtilityLibrary.hexToRgba('#000000'));
             console.log(UtilityLibrary.printMe('#000000'));
-            // console.log(UtilityLibrary.getRandCard());
             console.log(UtilityLibrary.asciiChar('x'));
             console.log(UtilityLibrary.isPalendrome('Ere I was like a psalm'));
             console.log(UtilityLibrary.reverse('Yo ho ho'));
@@ -39,7 +37,7 @@
             UtilityLibrary.giveError('orange@gmail.com');
             UtilityLibrary.giveAssert('orange@gmail.com');
             console.log(UtilityLibrary.imageSize('https://s0.2mdn.net/simgad/1183185463115785912'));
-            // console.log(UtilityLibrary.validateEmail('https://www.google.com',1));
+            console.log(UtilityLibrary.validateEmail('https://www.google.com',1));
 
             UtilityLibrary.fileToBase64('https://cdn.programiz.com/sites/tutorial2program/files/pc_logo.svg', function(base64) {
                 if (base64) {
@@ -52,10 +50,20 @@
             UtilityLibrary.getUserIP(function(ip) {
                 console.log("User IP Address:", ip);
             });
+
+            UtilityLibrary.getUserLocation(function(location) {
+                console.log("User Location:", location);
+            });
+
+            console.log(UtilityLibrary.convertDistance(60, 'mile', 'yard'));
+            console.log(UtilityLibrary.convertLength(60, 'cm', 'foot'));
+            console.log(UtilityLibrary.convertTemperature(650, 'K', 'F'));
+
+            const cardElement = document.getElementById('random-card');
+            const randomCard = UtilityLibrary.getRandCard();
+            console.log(randomCard);
         });
-        console.log(UtilityLibrary.convertDistance(60,meter,yard));
-        console.log(UtilityLibrary.convertLength(60,cm,foot));
-        console.log(UtilityLibrary.validateEmail(60,k,f));
+
     </script>
 </head>
 <body>

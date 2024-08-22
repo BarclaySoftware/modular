@@ -254,25 +254,15 @@ const UtilityLibrary = {
     // calculator
 
     getRandCard: function () {
-        const suits = ["Spades", "Diamonds", "Club", "Heart"];
+        const suits = ["Spades", "Diamonds", "Clubs", "Hearts"];
         const values = [
-        "Ace",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "Jack",
-        "Queen",
-        "King",
+            "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+            "Jack", "Queen", "King"
         ];
 
         let deck = [];
 
+        // Create the deck
         for (let i = 0; i < suits.length; i++) {
             for (let x = 0; x < values.length; x++) {
                 let card = { Value: values[x], Suit: suits[i] };
@@ -280,18 +270,21 @@ const UtilityLibrary = {
             }
         }
 
+        // Shuffle the deck
         for (let i = deck.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * i);
+            let j = Math.floor(Math.random() * (i + 1));
             let temp = deck[i];
             deck[i] = deck[j];
             deck[j] = temp;
         }
 
+        // Get the first five cards
+        let drawnCards = [];
         for (let i = 0; i < 5; i++) {
-            // console.log(`${deck[i].Value} of ${deck[i].Suit}`)
+            drawnCards.push(`${deck[i].Value} of ${deck[i].Suit}`);
         }
 
-        return `The first five cards are: ${deck[i].Value} of ${deck[i].Suit}`;
+        return `The first five cards are: ${drawnCards.join(', ')}`;
     },
 
     asciiChar: function (char) {
