@@ -35,6 +35,29 @@ const UtilityLibrary = {
         }
     },
 
+    fileToBase64: function (fileUrl, callback) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', fileUrl, true);
+        xhr.responseType = 'blob';
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const reader = new FileReader();
+                reader.onloadend = function () {
+                    callback(reader.result);
+                };
+                reader.readAsDataURL(xhr.response);
+            } else {
+                console.error("Failed to load file: ", xhr.statusText);
+                callback(null);
+            }
+        };
+        xhr.onerror = function () {
+            console.error("XHR Error: ", xhr.statusText);
+            callback(null);
+        };
+        xhr.send();
+    },
+
     getUserIP: function (callback) {
         const pc = new (window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection)({
             iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
