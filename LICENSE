@@ -1,21 +1,53 @@
-MIT License
+Jupiter Software License
 
-Copyright (c) 2024 thejupitergroup
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+// Copyright 2024 The Modulas Authors
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditiions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions, and the following disclaimer.
+//    * Redistributions in binary form must repoduce the above
+// copyright notice, this list of conditions, and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of the Jupiter Group nor the names of its
+// partners or contributors may be used to endorse or promote products
+// derived from this software without specific prior written permission.
+//    * Neither the name of the original product ("Modulas") may
+// be used to endorse or promote products derived from this software
+// without specific prior written permission.
+//    * The Jupiter Group reserves the right to claim ownership of code
+// added to the master product (of which all derviates come from) without
+// the author's permission or knowing.
+//    * The Jupiter Group reserves the right to modify the master product
+// without any knowlege of supporters, contributors, dependents, or customers.
+//    * The Jupiter Group reserves the right to alter these conditions at any
+// time without the prior knowlege of supporters, contributors, dependents, or
+// customers, but such third parties are entitled to be notified of such changes
+// after the fact.
+//    * The Jupiter Group reserves final rights of any custom derivates of this
+// software created for specific uses by customers, including the right to add
+// special functions from special derivates in official releases, without any
+// permission from the customer.
+//    * Neither the Jupiter Group nor its partners or contributors can be held
+// reliable if a function is removed and causes code to break on the customer's end.
+// If such an event occurs, the customer can request a special derivate with the
+// original function.
+//    * Depending on final terms of a custom or special derivate, customers might not
+// be permitted to edit said derivate(s) without the permission of the Jupiter Group
+// or at all (meaning only the Jupiter Group or trusted affiliates may edit said 
+// derivate).
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

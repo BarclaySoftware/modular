@@ -1,3 +1,11 @@
+// Copyright 2024 The Modulas Authors
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
+// Depending on if this file came from the Jupiter Group via a CDN, code may be changed automatically.
+// To prevent this, please go to the official repository (https://github.com/BarclaySoftware/modulas)
+// and download this file so you have a static local verion.
+
 const UtilityLibrary = {
     functionName: function () {
         // code
