@@ -11,7 +11,7 @@
         document.addEventListener("DOMContentLoaded", function() {
             console.log(UtilityLibrary.getCurrentTime());
             console.log(UtilityLibrary.getCurrentDate());
-            console.log(UtilityLibrary.getUserLanguage());
+            // console.log(UtilityLibrary.getUserLocation());
             console.log(UtilityLibrary.getUserBrowser());
             console.log(UtilityLibrary.isMobileDevice());
             console.log(UtilityLibrary.getUserLanguage());
@@ -53,6 +53,9 @@
                 console.log("User IP Address:", ip);
             });
         });
+        console.log(UtilityLibrary.convertDistance(60,meter,yard));
+        console.log(UtilityLibrary.convertLength(60,cm,foot));
+        console.log(UtilityLibrary.validateEmail(60,k,f));
     </script>
 </head>
 <body>

@@ -427,7 +427,50 @@ const UtilityLibrary = {
         }, delay);
     },
 
-    
+    convertDistance: function (value, fromUnit, toUnit) {
+        const conversionRates = {
+            km: { mile: 0.621371, meter: 1000, yard: 1093.61 },
+            mile: { km: 1.60934, meter: 1609.34, yard: 1760 },
+            meter: { km: 0.001, mile: 0.000621371, yard: 1.09361 },
+            yard: { km: 0.0009144, mile: 0.000568182, meter: 0.9144 }
+        };
+
+        if (fromUnit === toUnit) return value;
+
+        return value * (conversionRates[fromUnit] ? conversionRates[fromUnit][toUnit] : 1);
+    },
+
+    convertLength: function (value, fromUnit, toUnit) {
+        const conversionRates = {
+            cm: { inch: 0.393701, foot: 0.0328084 },
+            inch: { cm: 2.54, foot: 0.0833333 },
+            foot: { cm: 30.48, inch: 12 }
+        };
+
+        if (fromUnit === toUnit) return value;
+
+        return value * (conversionRates[fromUnit] ? conversionRates[fromUnit][toUnit] : 1);
+    },
+
+    convertTemperature: function (value, fromUnit, toUnit) {
+        if (fromUnit === toUnit) return value;
+
+        if (fromUnit === "C" && toUnit === "F") {
+            return (value * 9/5) + 32;
+        } else if (fromUnit === "F" && toUnit === "C") {
+            return (value - 32) * 5/9;
+        } else if (fromUnit === "C" && toUnit === "K") {
+            return value + 273.15;
+        } else if (fromUnit === "K" && toUnit === "C") {
+            return value - 273.15;
+        } else if (fromUnit === "F" && toUnit === "K") {
+            return (value - 32) * 5/9 + 273.15;
+        } else if (fromUnit === "K" && toUnit === "F") {
+            return (value - 273.15) * 9/5 + 32;
+        }
+
+        return value; // If units are not recognized
+    }
 };
 
 export default UtilityLibrary;
