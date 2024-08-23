@@ -412,18 +412,18 @@ const UtilityLibrary = {
         console.assert(message);
     },
 
-    imageSize: function (src) {
-        console.error('imageSize: This function is highly broken and may be removed in future releases.');
-        const img = new Image();
-
-        img.src = src;
-
-        img.onload = function() {
-            width = this.width;
-            height = this.height;
-            return `${width}px x ${height}px`;
-        }
-    },
+    // imageSize: function (src) {
+    //     console.error('imageSize: This function is highly broken and may be removed in future releases.');
+    //     const img = new Image();
+    // 
+    //     img.src = src;
+    // 
+    //     img.onload = function() {
+    //         width = this.width;
+    //         height = this.height;
+    //         return `${width}px x ${height}px`;
+    //     }
+    // },
 
     convertRelsToTime: function (rels) {
         this.giveWarn("convertRelsToTime: This function is meant to be a joke and may be removed in the future.");
