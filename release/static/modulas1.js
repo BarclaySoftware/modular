@@ -7,7 +7,7 @@
 // the official repository (https://github.com/BarclaySoftware/modulas)
 // and download the file to your computer. This will make the file static.
 
-const UtilityLibrary = {
+const modulas = {
     functionName: function () {
         // code
     },
@@ -468,4 +468,4 @@ const UtilityLibrary = {
     }
 };
 
-export default UtilityLibrary;
+export default modulas;
