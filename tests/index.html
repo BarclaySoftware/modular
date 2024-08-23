@@ -7,38 +7,39 @@
     <script type="module">
         // import UtilityLibrary from 'https://modulas.pages.dev/tests/js/utils1.js';
         // import UtilityLibrary from 'https://modulas.pages.dev/tests/utils2.js';
-        import UtilityLibrary from './utils2.js';
+        // import UtilityLibrary from './utils2.js';
+        import UtilityLibrary from 'https://modulas.pages.dev/release/auto/api.js';
 
         document.addEventListener("DOMContentLoaded", function() {
-            // console.log(UtilityLibrary.getCurrentTime());
-            // console.log(UtilityLibrary.getCurrentDate());
-            // console.log(UtilityLibrary.getUserBrowser());
-            // console.log(UtilityLibrary.isMobileDevice());
-            // console.log(UtilityLibrary.getUserLanguage());
-            // console.log(UtilityLibrary.getScreenResolution());
-            // console.log(UtilityLibrary.getRandomNumber(44,774));
-            // console.log(UtilityLibrary.getUserOS());
-            // console.log(UtilityLibrary.convertSecondsToTime(0.44));
-            // console.log(UtilityLibrary.getUserTimezoneOffset());
-            // console.log(UtilityLibrary.hexToRgb('#000000'));
-            // console.log(UtilityLibrary.hexToRgba('#000000'));
-            // console.log(UtilityLibrary.printMe('#000000'));
-            // console.log(UtilityLibrary.asciiChar('x'));
-            // console.log(UtilityLibrary.isPalendrome('Ere I was like a psalm'));
-            // console.log(UtilityLibrary.reverse('Yo ho ho'));
-            // console.log(UtilityLibrary.decToBin('64'));
-            // console.log(UtilityLibrary.makeBase64('Hello'));
-            // console.log(UtilityLibrary.currentUrl(''));
-            // console.log(UtilityLibrary.validateEmail('orange@gmail'));
-            // console.log(UtilityLibrary.validateEmail('orange@gmail.com'));
+            console.log(UtilityLibrary.getCurrentTime());
+            console.log(UtilityLibrary.getCurrentDate());
+            console.log(UtilityLibrary.getUserBrowser());
+            console.log(UtilityLibrary.isMobileDevice());
+            console.log(UtilityLibrary.getUserLanguage());
+            console.log(UtilityLibrary.getScreenResolution());
+            console.log(UtilityLibrary.getRandomNumber(44,774));
+            console.log(UtilityLibrary.getUserOS());
+            console.log(UtilityLibrary.convertSecondsToTime(0.44));
+            console.log(UtilityLibrary.getUserTimezoneOffset());
+            console.log(UtilityLibrary.hexToRgb('#000000'));
+            console.log(UtilityLibrary.hexToRgba('#000000'));
+            console.log(UtilityLibrary.printMe('#000000'));
+            console.log(UtilityLibrary.asciiChar('x'));
+            console.log(UtilityLibrary.isPalendrome('Ere I was like a psalm'));
+            console.log(UtilityLibrary.reverse('Yo ho ho'));
+            console.log(UtilityLibrary.decToBin('64'));
+            console.log(UtilityLibrary.makeBase64('Hello'));
+            console.log(UtilityLibrary.currentUrl(''));
+            console.log(UtilityLibrary.validateEmail('orange@gmail'));
+            console.log(UtilityLibrary.validateEmail('orange@gmail.com'));
 
-            // console.log('tueth');
-            // UtilityLibrary.giveMessage('orange@gmail.com');
-            // UtilityLibrary.giveInfo('orange@gmail.com');
-            // UtilityLibrary.giveWarn('orange@gmail.com');
-            // UtilityLibrary.giveError('orange@gmail.com');
-            // UtilityLibrary.giveAssert(1 === 2, "This will be displayed because the condition is false");
-            // UtilityLibrary.giveAssert(1 === 1, "This will not be displayed because the condition is true");
+            console.log('tueth');
+            UtilityLibrary.giveMessage('orange@gmail.com');
+            UtilityLibrary.giveInfo('orange@gmail.com');
+            UtilityLibrary.giveWarn('orange@gmail.com');
+            UtilityLibrary.giveError('orange@gmail.com');
+            UtilityLibrary.giveAssert(1 === 2, "This will be displayed because the condition is false");
+            UtilityLibrary.giveAssert(1 === 1, "This will not be displayed because the condition is true");
             
             UtilityLibrary.onButtonClick('myButton', function() {
                 console.log('Button was clicked!');
@@ -47,32 +48,32 @@
             });
 
 
-            // console.log(UtilityLibrary.imageSize('https://s0.2mdn.net/simgad/1183185463115785912'));
-            // console.log(UtilityLibrary.validateEmail('https://www.google.com',1));
+            console.log(UtilityLibrary.imageSize('https://s0.2mdn.net/simgad/1183185463115785912'));
+            console.log(UtilityLibrary.validateEmail('https://www.google.com',1));
 
-            // UtilityLibrary.fileToBase64('https://s0.2mdn.net/simgad/1183185463115785912', function(base64) {
-            //     if (base64) {
-            //         console.log('Base64:', base64);
-            //     } else {
-            //         console.error('Failed to convert file to Base64.');
-            //     }
-            // });
+            UtilityLibrary.fileToBase64('https://s0.2mdn.net/simgad/1183185463115785912', function(base64) {
+                if (base64) {
+                    console.log('Base64:', base64);
+                } else {
+                    console.error('Failed to convert file to Base64.');
+                }
+            });
 
-            // UtilityLibrary.getUserIP(function(ip) {
-            //     console.log("User IP Address:", ip);
-            // });
+            UtilityLibrary.getUserIP(function(ip) {
+                console.log("User IP Address:", ip);
+            });
 
-            // UtilityLibrary.getUserLocation(function(location) {
-            //     console.log("User Location:", location);
-            // });
+            UtilityLibrary.getUserLocation(function(location) {
+                console.log("User Location:", location);
+            });
 
-            // console.log(UtilityLibrary.convertDistance(60, 'mile', 'yard'));
-            // console.log(UtilityLibrary.convertLength(60, 'cm', 'foot'));
-            // console.log(UtilityLibrary.convertTemperature(650, 'K', 'F'));
+            console.log(UtilityLibrary.convertDistance(60, 'mile', 'yard'));
+            console.log(UtilityLibrary.convertLength(60, 'cm', 'foot'));
+            console.log(UtilityLibrary.convertTemperature(650, 'K', 'F'));
 
-            // const cardElement = document.getElementById('random-card');
-            // const randomCard = UtilityLibrary.getRandCard();
-            // console.log(randomCard);
+            const cardElement = document.getElementById('random-card');
+            const randomCard = UtilityLibrary.getRandCard();
+            console.log(randomCard);
         });
 
     </script>

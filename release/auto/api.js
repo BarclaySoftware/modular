@@ -30,18 +30,15 @@ const UtilityLibrary = {
 
     toClipboard: function (text) {
         if (!navigator.clipboard) {
-            // console.error("Clipboard API not supported.");
             this.giveError('Clipboard API not supported.');
             return;
         }
 
         navigator.clipboard.writeText(text)
             .then(() => {
-                // console.log("Text copied to clipboard.");
                 this.giveMessage("Text copied to the clipboard.");
             })
             .catch(err => {
-                // console.error("Failed to copy text: ", err);
                 this.giveError("Failed to copy text: ", err);
             });
     },
@@ -53,7 +50,6 @@ const UtilityLibrary = {
         if (button) {
             button.addEventListener('click', callback);
         } else {
-            // console.error(`Button with id "${buttonId}" not found.`);
             this.giveError(`Button with id "${buttonId}" not found.`);
         }
     },
@@ -66,20 +62,17 @@ const UtilityLibrary = {
                     callback({ latitude, longitude });
                 },
                 error => {
-                    // console.error("getUserLocation: Unable to retrieve location. Error:", error.message);
                     this.giveError("getUserLocation: Unable to retrieve location. Error:", error.message);
                     callback(null);
                 }
             );
         } else {
-            // console.error("getUserLocation: Geolocation is not supported by this browser.");
             this.giveError("getUserLocation: Geolocation is not supported by this browser.");
             callback(null);
         }
     },
 
     fileToBase64: function (fileUrl, callback) {
-        // console.warn('fileToBase64: This function is highly broken and may be removed in future releases.');
         this.giveError('fileToBase64: This function is highly broken and may be removed in future releases.');
         const xhr = new XMLHttpRequest();
         xhr.open('GET', fileUrl, true);
@@ -92,13 +85,11 @@ const UtilityLibrary = {
                 };
                 reader.readAsDataURL(xhr.response);
             } else {
-                // console.error("Failed to load file: ", xhr.statusText);
                 this.giveError("Failed to load file: ", xhr.statusText);
                 callback(null);
             }
         };
         xhr.onerror = function () {
-            // console.error("XHR Error: ", xhr.statusText);
             this.giveError("XHR Error: ", xhr.statusText);
             callback(null);
         };
@@ -194,13 +185,11 @@ const UtilityLibrary = {
 
     getRandomNumber: function (min, max) {
         if (typeof min !== 'number' || typeof max !== 'number') {
-            // console.error("getRandomNumber: Both 'min' and 'max' parameters must be numbers.");
             this.giveError("getRandomNumber: Both 'min' and 'max' parameters must be numbers.");
             return;
         }
 
         if (min > max) {
-            // console.error("getRandomNumber: The 'min' parameter must be less than or equal to the 'max' parameter.");
             this.giveError("getRandomNumber: The 'min' parameter must be less than or equal to the 'max' parameter.");
             return;
         }
@@ -216,7 +205,6 @@ const UtilityLibrary = {
 
     hexToRgb: function (hex) {
         if (typeof hex !== 'string' || !/^#?([a-fA-F0-9]{3}|[a-fA-F0-9]{6})$/.test(hex)) {
-            // console.error("hexToRgb: Invalid HEX color format.");
             this.giveError("hexToRgb: Invalid HEX color format.");
             return;
         }
