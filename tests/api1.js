@@ -1,9 +1,3 @@
-import { checkVersion } from './checker.js';
-checkVersion(glob.version);
-
-// Usage of the utility function (this will automatically show 'glob' information)
-someUtilityFunction();
-
 const glob = {
     name: "Utility Library",
     developer: "Your Name",
@@ -21,6 +15,12 @@ const glob = {
 (function() {
     glob.showInfo();
 })();
+
+import { checkVersion } from './checker.js';
+checkVersion(glob.version);
+
+// Usage of the utility function (this will automatically show 'glob' information)
+someUtilityFunction();
 
 // Copyright 2024 The Modulas Authors
 // Use of this source code is governed by a completely open license
