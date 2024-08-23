@@ -26,6 +26,35 @@ const UtilityLibrary = {
         return navigator.language || navigator.userLanguage;
     },
 
+    // TEST 1
+
+    toClipboard: function (text) {
+        if (!navigator.clipboard) {
+            // console.error("Clipboard API not supported.");
+            this.giveError('Clipboard API not supported.')
+            return;
+        }
+
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                console.log("Text copied to clipboard.");
+            })
+            .catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+    },
+
+    // TEST 2
+
+    onButtonClick: function(buttonId, callback) {
+        const button = document.getElementById(buttonId);
+        if (button) {
+            button.addEventListener('click', callback);
+        } else {
+            console.error(`Button with id "${buttonId}" not found.`);
+        }
+    },
+
     getUserLocation: function (callback) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
