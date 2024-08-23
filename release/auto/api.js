@@ -408,9 +408,9 @@ const UtilityLibrary = {
         console.error(message);
     },
 
-    giveAssert: function (message) {
-        console.assert(message);
-    },
+    giveAssert: function (condition, message) {
+        console.assert(condition, message);
+    },    
 
     // imageSize: function (src) {
     //     console.error('imageSize: This function is highly broken and may be removed in future releases.');
