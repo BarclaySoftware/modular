@@ -19,9 +19,6 @@ const glob = {
 import { checkVersion } from './checker.js';
 checkVersion(glob.version);
 
-// Usage of the utility function (this will automatically show 'glob' information)
-someUtilityFunction();
-
 // Copyright 2024 The Modulas Authors
 // Use of this source code is governed by a completely open license
 // that can be found in the LICENSE file.
