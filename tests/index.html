@@ -27,6 +27,7 @@
             console.log(UtilityLibrary.printMe('#000000'));
             console.log(UtilityLibrary.asciiChar('x'));
             console.log(UtilityLibrary.isPalendrome('Ere I was like a psalm'));
+            console.log(UtilityLibrary.isPalendrome('racecar'));
             console.log(UtilityLibrary.reverse('Yo ho ho'));
             console.log(UtilityLibrary.decToBin('64'));
             console.log(UtilityLibrary.makeBase64('Hello'));
@@ -34,7 +35,6 @@
             console.log(UtilityLibrary.validateEmail('orange@gmail'));
             console.log(UtilityLibrary.validateEmail('orange@gmail.com'));
 
-            console.log('tueth');
             UtilityLibrary.giveMessage('orange@gmail.com');
             UtilityLibrary.giveInfo('orange@gmail.com');
             UtilityLibrary.giveWarn('orange@gmail.com');
@@ -49,6 +49,13 @@
                 // Add any action here, like updating the DOM, making an API call, etc.
             });
 
+            // Example usage of encrypt and decrypt functions
+            const textToEncrypt = "Sensitive Data";
+            const encryptedText = UtilityLibrary.encrypt(textToEncrypt);
+            console.log("Encrypted Text:", encryptedText);
+
+            const decryptedText = UtilityLibrary.decrypt(encryptedText);
+            console.log("Decrypted Text:", decryptedText);
 
             // console.log(UtilityLibrary.imageSize('https://s0.2mdn.net/simgad/1183185463115785912'));
             console.log(UtilityLibrary.validateEmail('https://www.google.com',1));
@@ -65,9 +72,9 @@
                 console.log("User IP Address:", ip);
             });
 
-            UtilityLibrary.getUserLocation(function(location) {
-                console.log("User Location:", location);
-            });
+            // UtilityLibrary.getUserLocation(function(location) {
+            //     console.log("User Location:", location);
+            // });
 
             console.log(UtilityLibrary.convertDistance(60, 'mile', 'yard'));
             console.log(UtilityLibrary.convertLength(60, 'cm', 'foot'));

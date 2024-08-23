@@ -514,7 +514,25 @@ const UtilityLibrary = {
         }
 
         return value;
-    }
+    },
+    
+    encrypt: function (str) {
+        if (typeof str !== 'string' || !str.length) {
+            this.giveError("encrypt: Invalid input string.");
+            return;
+        }
+        let encryptedStr = btoa(unescape(encodeURIComponent(str)));
+        return encryptedStr;
+    },
+
+    decrypt: function (str) {
+        if (typeof str !== 'string' || !str.length) {
+            this.giveError("decrypt: Invalid input string.");
+            return;
+        }
+        let decryptedStr = decodeURIComponent(escape(atob(str)));
+        return decryptedStr;
+    },
 };
 
 export default UtilityLibrary;
