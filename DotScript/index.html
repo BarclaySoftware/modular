@@ -32,25 +32,9 @@
 
     <h2>Execution Result:</h2>
     <pre id="executionResultOutput"></pre>
-    <input type="file" id="fileInput" accept=".mylang" />
-<button onclick="loadAndRunCustomFile()">Run Custom File</button>
 
-<script type="module">
-    function loadAndRunCustomFile() {
-        const fileInput = document.getElementById('fileInput');
-        const file = fileInput.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                const customCode = event.target.result;
-                document.getElementById('customCodeInput').value = customCode;
-                runCustomCode(); // Use the existing function to translate and run the code
-            };
-            reader.readAsText(file);
-        }
-    }
-
-        import { translateCustomToJS } from './translate.js';
+    <script type="module">
+        import { translateCustomToJS } from './translator.js';
 
         function runCustomCode() {
             // Get the custom code from the textarea
