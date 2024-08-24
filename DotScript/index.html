@@ -1,1 +1,78 @@
-<script src="test.js" type="module"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Language Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Custom Language Translator</h1>
+    <p>Enter your code in the custom language below:</p>
+    <textarea id="customCodeInput" placeholder="Type your custom code here..."></textarea>
+    <button onclick="runCustomCode()">Run Code</button>
+    
+    <h2>Translated JavaScript:</h2>
+    <pre id="translatedCodeOutput"></pre>
+
+    <h2>Execution Result:</h2>
+    <pre id="executionResultOutput"></pre>
+    <input type="file" id="fileInput" accept=".mylang" />
+<button onclick="loadAndRunCustomFile()">Run Custom File</button>
+
+<script>
+    function loadAndRunCustomFile() {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const customCode = event.target.result;
+                document.getElementById('customCodeInput').value = customCode;
+                runCustomCode(); // Use the existing function to translate and run the code
+            };
+            reader.readAsText(file);
+        }
+    }
+</script>
+
+
+    <script type="module">
+        import { translateCustomToJS } from './translate.js';
+
+        function runCustomCode() {
+            // Get the custom code from the textarea
+            const customCode = document.getElementById('customCodeInput').value;
+
+            // Translate the custom code to JavaScript
+            const jsCode = translateCustomToJS(customCode);
+
+            // Display the translated JavaScript code
+            document.getElementById('translatedCodeOutput').textContent = jsCode;
+
+            try {
+                // Execute the translated JavaScript code and capture the output
+                const executionResult = eval(jsCode);
+                document.getElementById('executionResultOutput').textContent = executionResult || 'Code executed successfully.';
+            } catch (error) {
+                document.getElementById('executionResultOutput').textContent = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html>

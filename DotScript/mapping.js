@@ -1,4 +1,3 @@
-// customMapping.js
 export const customToJSMapping = {
     'call': 'function',
     'meet': 'name',

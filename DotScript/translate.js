@@ -1,5 +1,4 @@
-// translator.js
-import { customToJSMapping } from './customMapping.js';
+import { customToJSMapping } from './mapping.js';
 
 export function translateCustomToJS(customCode) {
     let jsCode = customCode;
