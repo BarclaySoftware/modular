@@ -16,21 +16,7 @@ const glob = {
     glob.showInfo();
 })();
 
-const checkVersion = function(currentVersion, requiredVersion = "1.0.0") {
-    const versionToArray = (version) => version.split('.').map(num => parseInt(num, 10));
-    const current = versionToArray(currentVersion);
-    const required = versionToArray(requiredVersion);
-
-    for (let i = 0; i < required.length; i++) {
-        if (current[i] > required[i]) return true;
-        if (current[i] < required[i]) {
-            console.error(`Update required: The current version (${currentVersion}) is lower than the required version (${requiredVersion}). Please update the library.`);
-            return false;
-        }
-    }
-    return true;
-};
-
+import { checkVersion } from './checker.js';
 checkVersion(glob.version);
 
 // Copyright 2024 The Modulas Authors
