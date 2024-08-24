@@ -35,7 +35,7 @@
     <input type="file" id="fileInput" accept=".mylang" />
 <button onclick="loadAndRunCustomFile()">Run Custom File</button>
 
-<script>
+<script type="module">
     function loadAndRunCustomFile() {
         const fileInput = document.getElementById('fileInput');
         const file = fileInput.files[0];
@@ -49,10 +49,7 @@
             reader.readAsText(file);
         }
     }
-</script>
 
-
-    <script type="module">
         import { translateCustomToJS } from './translate.js';
 
         function runCustomCode() {
